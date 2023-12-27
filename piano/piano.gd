@@ -4,12 +4,12 @@ extends Control
 
 # press key (triggered by external midi)
 func keyPressed(ev):
-	print('piano got', ev)
+	print('piano got ', ev)
 
 
 # release key (triggered by external midi)
 func keyReleased(ev):
-	print('piano got', ev)
+	print('piano release ', ev)
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 
