@@ -9,7 +9,7 @@ signal tone_off(c4_semitone: int)
 
 # press key (triggered by external midi)
 func key_pushed(c4_semitones):
-	#print('piano got ', semi_offset + semi)
+	print('piano got ', c4_semitones)
 	tone_on.emit(c4_semitones)
 
 # release key (triggered by external midi)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://crxbs7kahayuj"]
+[gd_scene load_steps=8 format=3 uid="uid://crxbs7kahayuj"]
 
 [ext_resource type="Script" path="res://piano/PianoKey.gd" id="1_8qcst"]
+[ext_resource type="Script" path="res://piano/ColorEffect.gd" id="2_vf1hi"]
 
 [sub_resource type="Theme" id="Theme_joo2t"]
 
@@ -41,6 +42,9 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_4gkww")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_30iwq")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_b8ei6")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_v8yev")
+
+[node name="ColorEffect" type="Node" parent="."]
+script = ExtResource("2_vf1hi")
 
 [connection signal="button_down" from="KeyButton" to="." method="pushed"]
 [connection signal="button_up" from="KeyButton" to="." method="released"]
