@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cerv3v1sk5x88"]
 
-[ext_resource type="Script" path="res://piano/piano_key.gd" id="1_fmbcx"]
+[ext_resource type="Script" path="res://piano/PianoKey.gd" id="1_h2y5p"]
 
 [sub_resource type="Theme" id="Theme_joo2t"]
 
@@ -17,7 +17,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 39.0
 offset_bottom = 169.0
-script = ExtResource("1_fmbcx")
+script = ExtResource("1_h2y5p")
 keyType = 1
 
 [node name="Fill" type="ColorRect" parent="."]
@@ -45,5 +45,5 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_ec6gj")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_hl2s7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_fndrm")
 
-[connection signal="button_down" from="KeyButton" to="." method="keyPressed"]
-[connection signal="button_up" from="KeyButton" to="." method="keyReleased"]
+[connection signal="button_down" from="KeyButton" to="." method="pushed"]
+[connection signal="button_up" from="KeyButton" to="." method="released"]

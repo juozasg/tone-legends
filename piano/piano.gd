@@ -1,15 +1,21 @@
 extends Control
+class_name Piano
 
-@export var octave = 0;
+@export var octave:int = 0
+@export var midi_event_source: MidiEventSource
+
+signal tone_on(c4_semitone: int)
+signal tone_off(c4_semitone: int)
 
 # press key (triggered by external midi)
-func keyPressed(ev):
-	print('piano got ', ev)
-
+func key_pushed(c4_semitones):
+	#print('piano got ', semi_offset + semi)
+	tone_on.emit(c4_semitones)
 
 # release key (triggered by external midi)
-func keyReleased(ev):
-	print('piano release ', ev)
+func key_released(c4_semitones):
+	#print('piano released ', semi_offset + semi)
+	tone_off.emit(c4_semitones)
 
 # Called when the node enters the scene tree for the first time.
 func _ready(): 

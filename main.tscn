@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnko22rcujtp8"]
+[gd_scene load_steps=4 format=3 uid="uid://bnko22rcujtp8"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_daqp8"]
+[ext_resource type="PackedScene" uid="uid://nxnvu5ieiubc" path="res://piano/piano.tscn" id="2_w3sbf"]
+[ext_resource type="Script" path="res://piano/MidiEventSource.gd" id="3_gdjcl"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_daqp8")
@@ -12,3 +14,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.533333, 0.164706, 0.290196, 1)
+
+[node name="PianoC4" parent="." node_paths=PackedStringArray("midi_event_source") instance=ExtResource("2_w3sbf")]
+offset_left = 448.0
+offset_top = 768.0
+offset_right = 448.0
+offset_bottom = 768.0
+midi_event_source = NodePath("../MidiEventSource")
+
+[node name="PianoC5" parent="." node_paths=PackedStringArray("midi_event_source") instance=ExtResource("2_w3sbf")]
+offset_left = 896.0
+offset_top = 768.0
+offset_right = 896.0
+offset_bottom = 768.0
+octave = 1
+midi_event_source = NodePath("../MidiEventSource")
+
+[node name="MidiEventSource" type="Node" parent="."]
+script = ExtResource("3_gdjcl")
