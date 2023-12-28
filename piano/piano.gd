@@ -3,6 +3,7 @@ class_name Piano
 
 @export var octave:int = 0
 @export var midi_event_source: MidiEventSource
+@export var audio_player: NoteAudioPlayer
 
 signal tone_on(c4_semitone: int)
 signal tone_off(c4_semitone: int)
@@ -11,6 +12,7 @@ signal tone_off(c4_semitone: int)
 func key_pushed(c4_semitones):
 	print('piano got ', c4_semitones)
 	tone_on.emit(c4_semitones)
+	audio_player.play_oneshot(c4_semitones)
 
 # release key (triggered by external midi)
 func key_released(c4_semitones):

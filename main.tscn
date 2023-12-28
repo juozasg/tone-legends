@@ -29,22 +29,20 @@ anchors_preset = 0
 offset_right = 896.0
 size_flags_vertical = 3
 
-[node name="PianoC4" parent="Pianos" node_paths=PackedStringArray("midi_event_source") instance=ExtResource("2_w3sbf")]
+[node name="PianoC4" parent="Pianos" node_paths=PackedStringArray("midi_event_source", "audio_player") instance=ExtResource("2_w3sbf")]
 layout_mode = 2
 offset_left = 512.0
 offset_top = 768.0
 offset_right = 960.0
 offset_bottom = 1024.0
 midi_event_source = NodePath("../../MidiEventSource")
+audio_player = NodePath("../../NoteAudioPlayer")
 
-[node name="PianoC5" parent="Pianos" node_paths=PackedStringArray("midi_event_source") instance=ExtResource("2_w3sbf")]
+[node name="PianoC5" parent="Pianos" node_paths=PackedStringArray("midi_event_source", "audio_player") instance=ExtResource("2_w3sbf")]
 layout_mode = 2
 offset_left = 960.0
 offset_top = 768.0
 offset_right = 1408.0
 offset_bottom = 1024.0
-octave = 1
 midi_event_source = NodePath("../../MidiEventSource")
-
-[connection signal="tone_on" from="Pianos/PianoC4" to="NoteAudioPlayer" method="play_oneshot"]
-[connection signal="tone_on" from="Pianos/PianoC5" to="NoteAudioPlayer" method="play_oneshot"]
+audio_player = NodePath("../../NoteAudioPlayer")

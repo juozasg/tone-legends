@@ -1,4 +1,5 @@
 extends Node
+class_name NoteAudioPlayer
 
 
 func _pitch_scale(c4_semitones:int) -> float:
