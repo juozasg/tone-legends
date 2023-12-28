@@ -1,7 +1,6 @@
 extends Control
 class_name PianoKey
 
-
 @export var semitone:int = 0
 
 enum KeyType {WHITE_KEY, BLACK_KEY}
@@ -19,13 +18,3 @@ func pushed():
 func released():
 	print('%s type key emit keyOFF semitone=' % keyType, semitone)
 	key_off.emit(semitone)
-
-
-## Called when the node enters the scene tree for the first time.
-#func _ready():
-#
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass

@@ -1,12 +1,9 @@
 extends Node
 class_name MidiEventSource
 
-
 signal note_on(c4_semitone: int)
 signal note_off(c4_semitone: int)
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	OS.open_midi_inputs()
 	print(OS.get_connected_midi_inputs())
@@ -22,11 +19,6 @@ func _input(input_event):
 		note_on.emit(c4_semitone)
 	elif midi_event.message == MIDI_MESSAGE_NOTE_OFF:
 		note_off.emit(c4_semitone)
-
-
-## Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-	#pass
 
 func _print_midi_info(midi_event: InputEventMIDI):
 	print(midi_event)

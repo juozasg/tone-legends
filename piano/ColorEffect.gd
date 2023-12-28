@@ -11,6 +11,5 @@ func _ready():
 func activate(_st):
 	fill.color = (Color.DODGER_BLUE + Color.WHITE) / 2
 
-
 func deactivate(_st):
 	fill.color = start_color
