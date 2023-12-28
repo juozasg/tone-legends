@@ -1,7 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ccbxtpwnwql0v"]
+[gd_scene load_steps=11 format=3 uid="uid://ccbxtpwnwql0v"]
 
 [ext_resource type="Script" path="res://piano/PianoKey.gd" id="1_7a14f"]
+[ext_resource type="Texture2D" uid="uid://bc7cb5qbpg01y" path="res://icon.svg" id="2_fxbtu"]
+[ext_resource type="Shader" path="res://piano/piano_key_highlight.gdshader" id="2_v77tp"]
 [ext_resource type="Script" path="res://piano/ColorEffect.gd" id="2_wfgbk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_umolg"]
+shader = ExtResource("2_v77tp")
 
 [sub_resource type="Theme" id="Theme_joo2t"]
 
@@ -21,13 +26,21 @@ offset_right = -1.28
 offset_bottom = 0.0399963
 script = ExtResource("1_7a14f")
 
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(355, 164)
+scale = Vector2(1.33594, 2.35156)
+texture = ExtResource("2_fxbtu")
+
 [node name="Fill" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_umolg")
 layout_mode = 2
 offset_right = 65.0
 offset_bottom = 255.0
 theme = SubResource("Theme_joo2t")
+color = Color(1, 0.113725, 0.27451, 1)
 
 [node name="Outline" type="Line2D" parent="."]
+visible = false
 points = PackedVector2Array(2.08165e-12, 2.08165e-12, 2.08165e-12, 256, 65, 256, 65, 2.08165e-12)
 closed = true
 width = 2.0
@@ -35,6 +48,7 @@ default_color = Color(0, 0, 0, 1)
 sharp_limit = 5.0
 
 [node name="KeyButton" type="Button" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 65.0
 offset_bottom = 256.0
