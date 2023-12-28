@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://buuro4r8xqjlu"]
+
+[ext_resource type="Script" path="res://piano/PianoKey.gd" id="1_s0twb"]
+[ext_resource type="Script" path="res://piano/ColorEffect.gd" id="2_0kx8c"]
+
+[sub_resource type="Theme" id="Theme_joo2t"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_khhjf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrsmh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ec6gj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hl2s7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fndrm"]
+
+[node name="BlackKey" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 39.0
+offset_bottom = 169.0
+script = ExtResource("1_s0twb")
+keyType = 1
+
+[node name="Fill" type="ColorRect" parent="."]
+layout_mode = 1
+offset_right = 39.0
+offset_bottom = 169.0
+theme = SubResource("Theme_joo2t")
+color = Color(0, 0, 0, 1)
+
+[node name="Outline" type="Line2D" parent="."]
+material = SubResource("CanvasItemMaterial_khhjf")
+position = Vector2(0.0617518, 0.384083)
+scale = Vector2(0.596093, 0.657426)
+points = PackedVector2Array(2.08165e-12, 2.08165e-12, 0, 256, 65, 256, 65, 2.08165e-12)
+closed = true
+width = 2.0
+default_color = Color(0, 0, 0, 1)
+sharp_limit = 5.0
+
+[node name="KeyButton" type="Button" parent="."]
+layout_mode = 0
+offset_right = 39.0
+offset_bottom = 169.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrsmh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ec6gj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hl2s7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_fndrm")
+
+[node name="ColorEffect" type="Node" parent="."]
+script = ExtResource("2_0kx8c")
+
+[connection signal="button_down" from="KeyButton" to="." method="pushed"]
+[connection signal="button_up" from="KeyButton" to="." method="released"]
