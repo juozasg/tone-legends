@@ -8,9 +8,9 @@ func _ready():
 	piano_key.key_on.connect(self.activate)
 	piano_key.key_off.connect(self.deactivate)
 
-func activate(sm):
+func activate(st):
 	fill.color = (Color.DODGER_BLUE + Color.WHITE) / 2
 
 
-func deactivate(sm):
+func deactivate(st):
 	fill.color = start_color
