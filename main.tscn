@@ -12,7 +12,6 @@ script = ExtResource("1_daqp8")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.533333, 0.164706, 0.290196, 1)
@@ -25,24 +24,23 @@ script = ExtResource("4_pnr08")
 
 [node name="Pianos" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 896.0
-size_flags_vertical = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -448.0
+offset_top = -300.0
+offset_right = 448.0
 
 [node name="PianoC4" parent="Pianos" node_paths=PackedStringArray("midi_event_source", "audio_player") instance=ExtResource("2_w3sbf")]
 layout_mode = 2
-offset_left = 512.0
-offset_top = 768.0
-offset_right = 960.0
-offset_bottom = 1024.0
 midi_event_source = NodePath("../../MidiEventSource")
 audio_player = NodePath("../../NoteAudioPlayer")
 
 [node name="PianoC5" parent="Pianos" node_paths=PackedStringArray("midi_event_source", "audio_player") instance=ExtResource("2_w3sbf")]
 layout_mode = 2
-offset_left = 960.0
-offset_top = 768.0
-offset_right = 1408.0
-offset_bottom = 1024.0
+offset_left = 448.0
+offset_right = 896.0
 midi_event_source = NodePath("../../MidiEventSource")
 audio_player = NodePath("../../NoteAudioPlayer")
