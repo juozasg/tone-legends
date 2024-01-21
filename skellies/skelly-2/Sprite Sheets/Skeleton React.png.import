@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hl34n2xm28hr"
-path="res://.godot/imported/piano-reference.png-492161c080fc68eda67642e905c3340f.ctex"
+uid="uid://cmnq0h2yajvcu"
+path="res://.godot/imported/Skeleton React.png-5f5373d76db59273a9fd873cea13d1ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://piano/piano-reference.png"
-dest_files=["res://.godot/imported/piano-reference.png-492161c080fc68eda67642e905c3340f.ctex"]
+source_file="res://skellies/Skeleton/Sprite Sheets/Skeleton React.png"
+dest_files=["res://.godot/imported/Skeleton React.png-5f5373d76db59273a9fd873cea13d1ee.ctex"]
 
 [params]
 

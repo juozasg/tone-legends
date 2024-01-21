@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://6n6jlcq70dnb"]
 
-[ext_resource type="Script" path="res://piano/Piano.gd" id="1_0prda"]
+[ext_resource type="Script" path="res://piano/src/Piano.gd" id="1_0prda"]
 [ext_resource type="PackedScene" uid="uid://crxbs7kahayuj" path="res://piano/piano_key_white.tscn" id="2_i5ang"]
 [ext_resource type="PackedScene" uid="uid://cerv3v1sk5x88" path="res://piano/piano_key_black.tscn" id="3_k0sja"]
 

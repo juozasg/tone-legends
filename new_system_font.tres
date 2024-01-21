@@ -1,0 +1,7 @@
+[gd_resource type="SystemFont" format=3 uid="uid://dq4lb60667tc5"]
+
+[resource]
+font_italic = true
+font_weight = 675
+font_stretch = 125
+msdf_size = 57

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://crxbs7kahayuj"]
 
-[ext_resource type="Script" path="res://piano/PianoKey.gd" id="1_8qcst"]
-[ext_resource type="Script" path="res://piano/ColorEffect.gd" id="2_vf1hi"]
+[ext_resource type="Script" path="res://piano/src/PianoKey.gd" id="1_8qcst"]
+[ext_resource type="Script" path="res://piano/src/ColorEffect.gd" id="2_vf1hi"]
 
 [sub_resource type="Theme" id="Theme_joo2t"]
 

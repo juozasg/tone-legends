@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccfcg1ugv3xfb"]
+[gd_scene load_steps=4 format=3 uid="uid://ccfcg1ugv3xfb"]
 
 [ext_resource type="Script" path="res://ui.gd" id="1_6ekgc"]
+[ext_resource type="SystemFont" uid="uid://dq4lb60667tc5" path="res://new_system_font.tres" id="2_tutuy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ajtwo"]
+font_size = 38
+font_color = Color(0.0352941, 0.0352941, 0.0352941, 1)
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_6ekgc")
@@ -36,9 +41,20 @@ size_flags_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 24
 
 [node name="Score" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_tutuy")
 text = "Init"
+label_settings = SubResource("LabelSettings_ajtwo")
+
+[node name="Score2" type="Label" parent="Control/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_tutuy")
+text = "two"
+label_settings = SubResource("LabelSettings_ajtwo")

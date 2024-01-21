@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_daqp8"]
 [ext_resource type="PackedScene" uid="uid://nxnvu5ieiubc" path="res://piano/piano.tscn" id="2_w3sbf"]
-[ext_resource type="Script" path="res://piano/MidiEventSource.gd" id="3_gdjcl"]
-[ext_resource type="Script" path="res://NoteAudioPlayer.gd" id="4_pnr08"]
+[ext_resource type="Script" path="res://piano/src/MidiEventSource.gd" id="3_gdjcl"]
+[ext_resource type="Script" path="res://piano/src/NoteAudioPlayer.gd" id="4_pnr08"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_daqp8")
